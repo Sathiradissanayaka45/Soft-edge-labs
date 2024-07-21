@@ -4,8 +4,8 @@ server:
 spring:
   datasource:
     url: jdbc:mysql://localhost:3306/event_management
-    username: root
-    password: Dilshara224#
+    username: Your username
+    password: Your Password
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
