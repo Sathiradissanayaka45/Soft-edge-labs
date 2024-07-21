@@ -41,3 +41,14 @@ The Event Management System is a web application that allows users to manage eve
        console:
          enabled: true
 
+## Run the Backend
+
+Open a terminal, navigate to the backend directory, and run:
+
+```bash
+./mvnw spring-boot:run
+
+### Create Tables
+
+After starting the backend, tables will be created automatically in the `event_management` schema.
+
