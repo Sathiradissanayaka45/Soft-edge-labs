@@ -126,6 +126,11 @@ Encountering issues? Here are some tips:
 - **Backend Connection Issues**: Ensure that MySQL is running and that the credentials in `application.yml` are correctly configured.
 - **Frontend Issues**: Check the terminal output for any errors and ensure all dependencies are properly installed.
 
+### 🌐 Access the Application
+
+- **Frontend**: Open a web browser and go to [http://localhost:3000](http://localhost:3000) to access the application.
+- **Backend**: The backend server runs on [http://localhost:8081](http://localhost:8081).
+- 
 ### ℹ️ Additional Information
 
 - **Backend Code**: Located in the `BACKEND` directory.
