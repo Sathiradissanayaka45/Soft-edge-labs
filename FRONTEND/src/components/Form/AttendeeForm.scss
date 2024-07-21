@@ -1,0 +1,55 @@
+@import '../variables';
+
+.attendee-form {
+  background-color: $card-bg-color;
+  border-radius: $border-radius;
+  box-shadow: $card-shadow;
+  padding: 30px;
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+  margin-top: 20px;
+  transition: transform $transition-speed, box-shadow $transition-speed;
+
+  h3 {
+    color: $primary-color;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-bottom: 2px solid $primary-color;
+    padding-bottom: 10px;
+  }
+
+  input {
+    width: calc(100% - 20px);
+    margin: 15px 0;
+    padding: 15px;
+    border: 1px solid $secondary-color;
+    border-radius: $border-radius;
+    font-size: 1.1rem;
+    transition: border-color $transition-speed, box-shadow $transition-speed;
+
+    &:focus {
+      border-color: $primary-color;
+      outline: none;
+      box-shadow: 0 0 5px rgba($primary-color, 0.3);
+    }
+  }
+
+  button {
+    background-color: $primary-color;
+    color: #fff;
+    border: none;
+    border-radius: $border-radius;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color $transition-speed, transform $transition-speed;
+
+    &:hover {
+      background-color: darken($primary-color, 7%);
+      transform: scale(1.05);
+    }
+  }
+}

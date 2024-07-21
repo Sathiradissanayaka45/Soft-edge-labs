@@ -1,0 +1,86 @@
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$button-bg-color: #28a745;
+$button-text-color: #fff;
+$bg-color: #f8f9fa;
+$input-bg-color: #ffffff;
+$border-radius: 8px;
+$transition-speed: 0.3s;
+$font-family: 'Roboto', sans-serif;
+
+body {
+  font-family: $font-family;
+}
+
+.event-form-container {
+  background: #ffffff;
+  padding: 40px 20px;
+  max-width: 600px;
+  margin: auto;
+  border-radius: $border-radius;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  min-height: 100vh;
+
+  h1 {
+    color: $primary-color;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 700;
+  }
+
+  .event-form {
+    display: flex;
+    flex-direction: column;
+
+    .form-group {
+      margin-bottom: 15px;
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: $primary-color;
+      }
+
+      input, textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: $border-radius;
+        box-sizing: border-box;
+        font-size: 1rem;
+        background-color: $input-bg-color;
+        transition: border-color $transition-speed;
+
+        &:focus {
+          border-color: $primary-color;
+          outline: none;
+        }
+      }
+
+      textarea {
+        resize: vertical;
+        min-height: 150px;
+      }
+    }
+
+    .submit-button {
+      background-color: $button-bg-color;
+      color: $button-text-color;
+      border: none;
+      border-radius: $border-radius;
+      padding: 12px 20px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color $transition-speed, transform $transition-speed;
+
+      &:hover {
+        background-color: lighten($button-bg-color, 5%);
+        transform: scale(1.05);
+      }
+    }
+  }
+}

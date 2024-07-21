@@ -1,0 +1,271 @@
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$update-color: #28a745;
+$delete-color: #dc3545;
+$add-event-color: #ffc107;
+$bg-color: #f8f9fa;
+$card-bg-color: #ffffff;
+$card-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+$card-hover-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+$border-radius: 12px;
+$transition-speed: 0.3s;
+$font-family: 'Roboto', sans-serif;
+$icon-size: 1.2rem;
+
+// Global Styles
+body {
+  font-family: $font-family;
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+}
+
+.event-list {
+  background: linear-gradient(135deg, #ffffff, #ffffff);
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+
+  // Add responsiveness for h1 and add-event-button
+  h1 {
+    color: $primary-color;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+
+    @media (max-width: 768px) {
+      font-size: 2rem;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 1.5rem;
+    }
+  }
+
+  .add-event-button {
+    background-color: $add-event-color;
+    color: #fff;
+    border: none;
+    border-radius: $border-radius;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color $transition-speed, transform $transition-speed;
+    display: inline-block;
+    margin-bottom: 30px;
+
+    &:hover {
+      background-color: lighten($add-event-color, 5%);
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 0.8rem;
+      padding: 8px 16px;
+    }
+  }
+
+  .event-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); // Responsive grid layout
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+
+    @media (max-width: 768px) {
+      gap: 15px;
+    }
+
+    @media (max-width: 480px) {
+      gap: 10px;
+    }
+  }
+
+  .event-card {
+    background-color: $card-bg-color;
+    border-radius: $border-radius;
+    box-shadow: $card-shadow;
+    overflow: hidden;
+    transition: transform $transition-speed, box-shadow $transition-speed, background-color $transition-speed;
+    display: flex;
+    flex-direction: column;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: $card-hover-shadow;
+      background-color: lighten($card-bg-color, 5%);
+    }
+
+    .card-header {
+      padding: 15px;
+      background: $primary-color;
+      color: #fff;
+      text-align: center;
+      border-bottom: 2px solid darken($primary-color, 10%);
+      box-shadow: inset 0 -5px 15px rgba(0, 0, 0, 0.1);
+
+      h2 {
+        margin: 0;
+        font-size: 1.5rem;
+
+        @media (max-width: 768px) {
+          font-size: 1.25rem;
+        }
+
+        @media (max-width: 480px) {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    .card-body {
+      padding: 15px;
+      text-align: center;
+      flex: 1;
+
+      p {
+        margin: 10px 0;
+        color: $secondary-color;
+        font-size: 0.95rem;
+        line-height: 1.5;
+
+        @media (max-width: 768px) {
+          font-size: 0.9rem;
+        }
+
+        @media (max-width: 480px) {
+          font-size: 0.85rem;
+        }
+      }
+
+      .event-details {
+        margin: 10px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        span {
+          font-size: 0.85rem;
+          color: $secondary-color;
+        }
+      }
+    }
+
+    .card-footer {
+      padding: 10px;
+      background: $bg-color;
+      text-align: center;
+      border-top: 2px solid lighten($bg-color, 10%);
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+
+      a, button {
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 0.9rem;
+        transition: color $transition-speed, transform $transition-speed, background-color $transition-speed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px 12px;
+        border-radius: $border-radius;
+        margin: 5px;
+
+        &.update {
+          color: #fff;
+          background: linear-gradient(145deg, $update-color, darken($update-color, 10%));
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+          &:hover {
+            background: linear-gradient(145deg, darken($update-color, 10%), $update-color);
+            transform: scale(1.05);
+          }
+        }
+
+        &.delete {
+          color: #fff;
+          background-color: $delete-color;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+          gap: 8px;
+          padding: 8px 16px;
+          border: none;
+          cursor: pointer;
+
+          &:hover {
+            background-color: darken($delete-color, 10%);
+            transform: scale(1.05);
+          }
+        }
+
+        &.details {
+          color: $primary-color;
+          background-color: transparent;
+          border: 2px solid $primary-color;
+
+          &:hover {
+            color: darken($primary-color, 10%);
+            background-color: rgba($primary-color, 0.1);
+            transform: scale(1.05);
+          }
+        }
+      }
+    }
+  }
+
+  .confirmation-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: $border-radius;
+    box-shadow: $card-shadow;
+    padding: 20px;
+    z-index: 1000;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    p {
+      font-size: 1rem;
+      color: $secondary-color;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: $border-radius;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color $transition-speed;
+      width: 100%;
+
+      &:first-of-type {
+        background-color: $delete-color;
+        color: #fff;
+      }
+
+      &:last-of-type {
+        background-color: #6c757d;
+        color: #fff;
+      }
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}

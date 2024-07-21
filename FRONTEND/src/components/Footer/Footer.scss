@@ -1,0 +1,13 @@
+$footer-bg-color: #343a40;
+$footer-text-color: #fff;
+
+.footer {
+    background-color: $footer-bg-color;
+    color: $footer-text-color;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}

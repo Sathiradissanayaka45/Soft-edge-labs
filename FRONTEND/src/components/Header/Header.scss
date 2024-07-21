@@ -1,0 +1,124 @@
+$header-bg-color: #343a40;
+$header-text-color: #fff;
+$nav-link-color: #fff;
+$nav-link-hover-color: #f8f9fa;
+$nav-button-bg-color: #dc3545;
+$nav-button-hover-bg-color: #dc3545;
+
+.header {
+    background-color: $header-bg-color;
+    color: $header-text-color;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 100%;
+
+        .logo {
+            font-size: 1.5rem;
+            color: $header-text-color;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 2rem;
+            background: none;
+            border: none;
+            color: $header-text-color;
+            cursor: pointer;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+
+            .nav-link {
+                color: $nav-link-color;
+                text-decoration: none;
+                margin: 0 15px;
+                font-size: 1rem;
+                font-weight: 500;
+
+                &:hover {
+                    color: $nav-link-hover-color;
+                }
+            }
+
+            .nav-button {
+                background-color: $nav-button-bg-color;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                padding: 10px 20px;
+                font-size: 1rem;
+                cursor: pointer;
+                transition: background-color 0.3s;
+
+                &:hover {
+                    background-color: $nav-button-hover-bg-color;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .mobile-navigation-links {
+        display: none; /* Hide navigation links by default */
+        flex-direction: column;
+        position: absolute;
+        top: calc(100% + 10px);
+        left: 0;
+        background-color: #007bff;
+        padding: 10px;
+        width: 100%;
+        border-radius: 5px;
+    }
+
+    /* Mobile navigation links - show when showLinks is true */
+    .mobile-navigation-links.show-links {
+        display: flex;
+    }
+
+    .mobile-navigation-link {
+        color: #ffff;
+        font-size: 16px;
+        text-decoration: none;
+        padding: 10px;
+    }
+
+    .mobile-navigation-button {
+        background-color: $nav-button-bg-color;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        margin-top: 10px;
+
+        &:hover {
+            background-color: $nav-button-hover-bg-color;
+        }
+    }
+}
