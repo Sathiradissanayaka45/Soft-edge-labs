@@ -136,5 +136,5 @@ Encountering issues? Here are some tips:
 - **Backend Code**: Located in the `BACKEND` directory.
 - **Frontend Code**: Located in the `FRONTEND` directory.
 
-For additional support or questions, please refer to the documentation or contact support for assistance.
+For additional support or questions, please refer to the documentation or contact me at [sathiradissanayaka45@gmail.com](mailto:sathiradissanayaka45@gmail.com) for assistance.
 
