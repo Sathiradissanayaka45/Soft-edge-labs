@@ -14,7 +14,7 @@ public class Attendee {
     private String email;
 
     @ManyToMany(mappedBy = "attendees")
-    @JsonIgnore // Add this annotation
+    @JsonIgnore
     private Set<Event> events;
 
 
