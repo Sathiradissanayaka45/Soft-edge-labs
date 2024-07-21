@@ -1,35 +1,35 @@
-# Soft-edge-labs
-# Event Management System
+# 🎉 Soft-edge-labs
+## 🌟 Event Management System
 
-## Overview
+### 📋 Overview
 
-The Event Management System is a web application that allows users to manage events and attendees. The application consists of a backend developed with Spring Boot (JDK 19) and a frontend developed with React.js.
+Welcome to the **Event Management System**! This comprehensive web application is designed to streamline the management of events and attendees. The system features a powerful backend built with **Spring Boot (JDK 19)** and a dynamic frontend developed using **React.js**.
 
-## Features
+### 🚀 Features
 
-- **Create Events**: Users can create new events.
-- **Read Events**: Users can view details of events.
-- **Add Attendees**: Users can add attendees to events.
-- **Remove Attendees**: Users can remove attendees from events.
-- **Update Events**: Users can update event details.
-- **Delete Events**: Users can delete events.
+- **Create Events**: Easily create new events with detailed information.
+- **Read Events**: View and manage detailed information about each event.
+- **Add Attendees**: Effortlessly add attendees to specific events.
+- **Remove Attendees**: Remove attendees from events as needed.
+- **Update Events**: Modify event details with ease.
+- **Delete Events**: Remove events with a confirmation prompt.
 
-## Backend Setup
+### ⚙️ Backend Setup
 
-### Prerequisites
+#### Prerequisites
 
-- JDK 19
-- MySQL Workbench
+- **JDK 19**: Ensure you have JDK 19 installed.
+- **MySQL Workbench**: Required for database management.
 
-### Database Configuration
+#### Database Configuration
 
 1. **Create Schema**:
    - Open MySQL Workbench and create a schema named `event_management`.
 
 2. **Configure Application**:
-   - Clone the repository and navigate to the backend directory.
+   - Clone the repository and navigate to the `backend` directory.
    - Open `src/main/resources/application.yml`.
-   - Configure the MySQL connection by replacing `your_username` and `your_password` with your actual MySQL credentials.
+   - Update the MySQL connection details by replacing `your_username` and `your_password` with your MySQL credentials:
 
    ```yaml
    spring:
@@ -40,6 +40,7 @@ The Event Management System is a web application that allows users to manage eve
      h2:
        console:
          enabled: true
+
 
 ## Run the Backend
 
