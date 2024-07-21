@@ -52,3 +52,26 @@ Open a terminal, navigate to the backend directory, and run:
 
 After starting the backend, tables will be created automatically in the `event_management` schema.
 
+### Frontend Setup
+
+#### Prerequisites
+
+- Node.js
+- npm
+
+#### Install Dependencies
+
+1. Open a terminal and navigate to the frontend directory.
+2. Install the required packages by running:
+
+    ```bash
+    npm install
+    ```
+
+#### Run the Frontend
+
+Start the frontend application with:
+
+```bash
+npm start
+
