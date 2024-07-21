@@ -75,3 +75,6 @@ Start the frontend application with:
 ```bash
 npm start
 
+#### Access the Application
+
+Open a web browser and go to [http://localhost:3000](http://localhost:3000) to access the application.
