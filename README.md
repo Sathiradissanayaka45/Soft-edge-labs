@@ -78,3 +78,24 @@ npm start
 #### Access the Application
 
 Open a web browser and go to [http://localhost:3000](http://localhost:3000) to access the application.
+
+
+### Usage
+
+- **Create an Event**: Navigate to the "Add Event" page to create a new event.
+- **View Events**: On the homepage, view the list of events.
+- **Add Attendees**: Open an event to view details and use the form to add attendees.
+- **Remove Attendees**: In the event details, you can remove attendees.
+- **Update an Event**: Click "Update" on an event card to modify event details.
+- **Delete an Event**: Click "Delete" on an event card to remove the event. A confirmation popup will appear to confirm the deletion.
+
+### Troubleshooting
+
+- **Backend Connection Issues**: Ensure MySQL is running and credentials in `application.yml` are correct.
+- **Frontend Issues**: Check terminal output for errors and ensure all dependencies are installed.
+
+### Additional Information
+
+- The backend code is located in the `backend` directory.
+- The frontend code is located in the `frontend` directory.
+
