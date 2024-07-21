@@ -77,7 +77,7 @@ After starting the backend, tables will be created automatically in the `event_m
 
 Start the frontend application with:
 
-```bash
+``bash
 npm start
 
 #### Access the Application
