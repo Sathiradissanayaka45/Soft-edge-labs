@@ -42,67 +42,94 @@ Welcome to the **Event Management System**! This comprehensive web application i
          enabled: true
 
 
-## Run the Backend
+## 🚀 Run the Backend
 
-To start the backend server:
+To start the backend server, follow these steps:
 
-1. Open a terminal.
-2. Navigate to the `backend` directory.
-3. Run the following command:
+1. **Open a terminal** on your system.
+2. **Navigate to the `backend` directory** where your backend code is located.
+3. **Run the following command** to start the backend server:
 
    ```bash
    ./mvnw spring-boot:run
 
+### 🗃️ Create Tables
 
-### Create Tables
+Once the backend server is up and running, it will automatically generate the required tables in the `event_management` schema. You don't need to create them manually—everything is handled for you!
 
-After starting the backend, tables will be created automatically in the `event_management` schema.
+If the tables are not created, ensure the backend server is running correctly and check the logs for any errors.
 
-### Frontend Setup
 
-#### Prerequisites
+### 🌐 Frontend Setup
 
-- Node.js
-- npm
+#### 🛠️ Prerequisites
 
-#### Install Dependencies
+Before you start, make sure you have the following installed:
 
-1. Open a terminal and navigate to the frontend directory.
-2. Install the required packages by running:
+- **Node.js**: A JavaScript runtime for building scalable network applications. You can download it from [Node.js official website](https://nodejs.org/).
+- **npm**: The Node.js package manager, included with Node.js. It helps you manage and install project dependencies.
+
+Make sure these tools are properly set up to get the frontend running smoothly.
+
+#### 📦 Install Dependencies
+
+To set up the frontend, follow these steps:
+
+1. **Open a Terminal**: Launch your terminal application.
+2. **Navigate to the Frontend Directory**: Use the `cd` command to go to the directory where the frontend code is located.
+   
+   ```bash
+   cd path/to/frontend
+
 
     ```bash
     npm install
     ```
 
-#### Run the Frontend
+#### 🚀 Run the Frontend
 
-Start the frontend application with:
+To launch the frontend application:
 
-``bash
-npm start
+1. **Open a Terminal**: Ensure your terminal is open and you're in the frontend directory.
+2. **Start the Application**: Run the following command to start the frontend server:
 
-#### Access the Application
+   ```bash
+   npm start
 
-Open a web browser and go to [http://localhost:3000](http://localhost:3000) to access the application.
+#### 🌐 Access the Application
+
+To view the application, follow these steps:
+
+1. **Open a Web Browser**: Use your preferred web browser.
+2. **Navigate to the Application**: Enter the following URL in the address bar:
+
+   [http://localhost:3000](http://localhost:3000)
+
+   This will load the Event Management System, where you can interact with all its features.
 
 
-### Usage
+### 🛠️ Usage
 
-- **Create an Event**: Navigate to the "Add Event" page to create a new event.
-- **View Events**: On the homepage, view the list of events.
-- **Add Attendees**: Open an event to view details and use the form to add attendees.
-- **Remove Attendees**: In the event details, you can remove attendees.
-- **Update an Event**: Click "Update" on an event card to modify event details.
-- **Delete an Event**: Click "Delete" on an event card to remove the event. A confirmation popup will appear to confirm the deletion.
+Explore the main functionalities of the Event Management System:
 
-### Troubleshooting
+- **Create an Event**: Navigate to the **"Add Event"** page to create new events with ease.
+- **View Events**: On the homepage, browse through the list of events to find what you're looking for.
+- **Add Attendees**: Open an event to view its details and use the provided form to add new attendees.
+- **Remove Attendees**: Within the event details, you can remove attendees as needed.
+- **Update an Event**: Click **"Update"** on an event card to modify the event details and keep information current.
+- **Delete an Event**: Click **"Delete"** on an event card to remove it. A confirmation popup will ensure you’re making the right choice.
 
-- **Backend Connection Issues**: Ensure MySQL is running and credentials in `application.yml` are correct.
-- **Frontend Issues**: Check terminal output for errors and ensure all dependencies are installed.
+### 🔧 Troubleshooting
 
-### Additional Information
+Encountering issues? Here are some tips:
 
-- The backend code is located in the `backend` directory.
-- The frontend code is located in the `frontend` directory.
+- **Backend Connection Issues**: Ensure that MySQL is running and that the credentials in `application.yml` are correctly configured.
+- **Frontend Issues**: Check the terminal output for any errors and ensure all dependencies are properly installed.
 
-For further questions or support, please refer to the documentation or contact support.
+### ℹ️ Additional Information
+
+- **Backend Code**: Located in the `BACKEND` directory.
+- **Frontend Code**: Located in the `FRONTEND` directory.
+
+For additional support or questions, please refer to the documentation or contact support for assistance.
+
