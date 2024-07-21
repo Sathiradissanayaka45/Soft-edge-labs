@@ -43,10 +43,15 @@ The Event Management System is a web application that allows users to manage eve
 
 ## Run the Backend
 
-Open a terminal, navigate to the backend directory, and run:
+To start the backend server:
 
-```bash
-./mvnw spring-boot:run
+1. Open a terminal.
+2. Navigate to the `backend` directory.
+3. Run the following command:
+
+   ```bash
+   ./mvnw spring-boot:run
+
 
 ### Create Tables
 
