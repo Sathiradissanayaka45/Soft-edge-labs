@@ -1,3 +1,4 @@
+// Color and style variables
 $primary-color: #007bff;
 $secondary-color: #6c757d;
 $button-bg-color: #28a745;
@@ -8,10 +9,12 @@ $border-radius: 8px;
 $transition-speed: 0.3s;
 $font-family: 'Roboto', sans-serif;
 
+// Apply the font family to the entire body
 body {
   font-family: $font-family;
 }
 
+// Style for the container of the event form
 .event-form-container {
   background: #ffffff;
   padding: 40px 20px;
@@ -22,6 +25,7 @@ body {
   border: 1px solid #ddd;
   min-height: 100vh;
 
+  // Style for the heading inside the form container
   h1 {
     color: $primary-color;
     margin-bottom: 20px;
@@ -30,13 +34,16 @@ body {
     font-weight: 700;
   }
 
+  // Style for the form itself
   .event-form {
     display: flex;
     flex-direction: column;
 
+    // Style for each form group (input/textarea)
     .form-group {
       margin-bottom: 15px;
 
+      // Style for labels within form groups
       label {
         display: block;
         margin-bottom: 5px;
@@ -44,6 +51,7 @@ body {
         color: $primary-color;
       }
 
+      // Style for input and textarea elements
       input, textarea {
         width: 100%;
         padding: 10px;
@@ -60,12 +68,14 @@ body {
         }
       }
 
+      // Additional style for textarea elements
       textarea {
         resize: vertical;
         min-height: 150px;
       }
     }
 
+    // Style for the submit button
     .submit-button {
       background-color: $button-bg-color;
       color: $button-text-color;

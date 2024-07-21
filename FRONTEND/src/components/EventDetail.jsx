@@ -5,49 +5,52 @@ import AttendeeForm from './Form/AttendeeForm';
 import './EventDetail.scss';
 
 const EventDetail = () => {
-    const { id } = useParams();
-    const [event, setEvent] = useState(null);
-    const [loading, setLoading] = useState(true);
+    const { id } = useParams(); // Get event ID from route parameters
+    const [event, setEvent] = useState(null); // State to store event data
+    const [loading, setLoading] = useState(true); // State to handle loading state
 
     useEffect(() => {
+        // Fetch event details when component mounts or ID changes
         const fetchEvent = async () => {
             try {
                 const response = await axios.get(`http://localhost:8081/api/events/${id}`);
-                setEvent(response.data);
-                setLoading(false);
+                setEvent(response.data); // Set event data
+                setLoading(false); // Update loading state
             } catch (error) {
-                console.error('Error fetching event', error);
+                console.error('Error fetching event', error); // Handle fetch error
             }
         };
         fetchEvent();
-    }, [id]);
+    }, [id]); // Dependency array to refetch if ID changes
 
+    // Handle attendee registration
     const handleAttendeeRegister = async (attendee) => {
         try {
             await axios.post(`http://localhost:8081/api/events/${id}/attendees`, attendee);
             setEvent(prev => ({
                 ...prev,
-                attendees: [...prev.attendees, attendee]
+                attendees: [...prev.attendees, attendee] // Add new attendee
             }));
         } catch (error) {
-            console.error('Error registering attendee', error);
+            console.error('Error registering attendee', error); // Handle registration error
         }
     };
 
+    // Handle attendee deletion
     const handleAttendeeDelete = async (attendeeId) => {
-        const numericAttendeeId = Number(attendeeId);
+        const numericAttendeeId = Number(attendeeId); // Convert ID to number
         try {
             await axios.delete(`http://localhost:8081/api/events/${id}/attendees/${numericAttendeeId}`);
             setEvent(prev => ({
                 ...prev,
-                attendees: prev.attendees.filter(attendee => attendee.id !== numericAttendeeId)
+                attendees: prev.attendees.filter(attendee => attendee.id !== numericAttendeeId) // Remove deleted attendee
             }));
         } catch (error) {
-            console.error('Error deleting attendee', error);
+            console.error('Error deleting attendee', error); // Handle deletion error
         }
     };
 
-    if (loading) return <p>Loading...</p>;
+    if (loading) return <p>Loading...</p>; // Display loading text while fetching data
 
     return (
         <div className="event-detail">

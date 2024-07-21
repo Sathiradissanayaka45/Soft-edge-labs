@@ -5,35 +5,47 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'; 
 import './EventForm.scss';
 
+// EventForm component for adding or updating an event
 const EventForm = ({ event = {}, onSave }) => {
+    // State hooks for form fields
     const [name, setName] = useState(event.name || '');
     const [description, setDescription] = useState(event.description || '');
     const [date, setDate] = useState(event.date ? new Date(event.date).toISOString().split('T')[0] : '');
     const [location, setLocation] = useState(event.location || '');
 
-    const navigate = useNavigate();
+    const navigate = useNavigate(); // Hook for navigation
 
+    // Handle form submission
     const handleSubmit = async (e) => {
-        e.preventDefault();
+        e.preventDefault(); // Prevent default form submission behavior
+
+        // Construct event data from state
         const eventData = { name, description, date, location };
 
         try {
             if (event.id) {
-                // Update event
+                // Update existing event
                 await axios.put(`http://localhost:8081/api/events/${event.id}`, eventData);
             } else {
                 // Add new event
                 await axios.post('http://localhost:8081/api/events', eventData);
             }
-            toast.success('Event saved successfully!'); // Show success toast
+            // Show success toast notification
+            toast.success('Event saved successfully!');
+            
             // Reset form fields
             setName('');
             setDescription('');
             setDate('');
             setLocation('');
+            
+            // Call onSave callback function (if provided)
             onSave();
+            
+            // Navigate to the home page
             navigate('/');
         } catch (error) {
+            // Log error and show error toast notification
             console.error('Error saving event', error);
         }
     };

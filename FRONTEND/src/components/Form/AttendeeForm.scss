@@ -1,55 +1,55 @@
-@import '../variables';
+@import '../variables'; // Import variables for consistent styling
 
 .attendee-form {
-  background-color: $card-bg-color;
-  border-radius: $border-radius;
-  box-shadow: $card-shadow;
-  padding: 30px;
-  text-align: center;
-  width: 100%;
-  max-width: 500px;
-  margin-top: 20px;
-  transition: transform $transition-speed, box-shadow $transition-speed;
+  background-color: $card-bg-color; // Set the background color of the form
+  border-radius: $border-radius; // Apply border radius for rounded corners
+  box-shadow: $card-shadow; // Apply shadow for depth effect
+  padding: 30px; // Add padding inside the form
+  text-align: center; // Center-align text within the form
+  width: 100%; // Full width
+  max-width: 500px; // Maximum width of the form
+  margin-top: 20px; // Margin at the top
+  transition: transform $transition-speed, box-shadow $transition-speed; // Smooth transitions for transform and shadow effects
 
   h3 {
-    color: $primary-color;
-    margin-bottom: 20px;
-    font-size: 2rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    border-bottom: 2px solid $primary-color;
-    padding-bottom: 10px;
+    color: $primary-color; // Set the text color for the heading
+    margin-bottom: 20px; // Margin below the heading
+    font-size: 2rem; // Font size for the heading
+    font-weight: 700; // Font weight for the heading
+    text-transform: uppercase; // Transform text to uppercase
+    border-bottom: 2px solid $primary-color; // Add a bottom border with primary color
+    padding-bottom: 10px; // Padding below the heading
   }
 
   input {
-    width: calc(100% - 20px);
-    margin: 15px 0;
-    padding: 15px;
-    border: 1px solid $secondary-color;
-    border-radius: $border-radius;
-    font-size: 1.1rem;
-    transition: border-color $transition-speed, box-shadow $transition-speed;
+    width: calc(100% - 20px); // Full width minus padding
+    margin: 15px 0; // Vertical margin between inputs
+    padding: 15px; // Padding inside the input fields
+    border: 1px solid $secondary-color; // Border color
+    border-radius: $border-radius; // Apply border radius
+    font-size: 1.1rem; // Font size for input text
+    transition: border-color $transition-speed, box-shadow $transition-speed; // Smooth transitions for border color and box shadow
 
     &:focus {
-      border-color: $primary-color;
-      outline: none;
-      box-shadow: 0 0 5px rgba($primary-color, 0.3);
+      border-color: $primary-color; // Change border color on focus
+      outline: none; // Remove default outline
+      box-shadow: 0 0 5px rgba($primary-color, 0.3); // Add a box shadow on focus
     }
   }
 
   button {
-    background-color: $primary-color;
-    color: #fff;
-    border: none;
-    border-radius: $border-radius;
-    padding: 15px 30px;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: background-color $transition-speed, transform $transition-speed;
+    background-color: $primary-color; // Set background color for the button
+    color: #fff; // Text color for the button
+    border: none; // Remove border
+    border-radius: $border-radius; // Apply border radius
+    padding: 15px 30px; // Padding inside the button
+    font-size: 1.1rem; // Font size for button text
+    cursor: pointer; // Change cursor to pointer on hover
+    transition: background-color $transition-speed, transform $transition-speed; // Smooth transitions for background color and transform effects
 
     &:hover {
-      background-color: darken($primary-color, 7%);
-      transform: scale(1.05);
+      background-color: darken($primary-color, 7%); // Darken background color on hover
+      transform: scale(1.05); // Slightly scale up the button on hover
     }
   }
 }

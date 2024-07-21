@@ -1,25 +1,28 @@
 @import './variables';
 
+// Main container for the event detail page
 .event-detail {
-  background: linear-gradient(135deg, #f9f9f9, #e3e4e8);
-  padding: 50px 25px;
+  background: linear-gradient(135deg, #f9f9f9, #e3e4e8); // Gradient background for a modern look
+  padding: 50px 25px; // Padding for spacing
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 100vh;
-  animation: fadeIn 0.5s ease-in-out;
+  min-height: 100vh; // Full viewport height
+  animation: fadeIn 0.5s ease-in-out; // Fade-in animation for page load
   border-radius: $border-radius;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); // Shadow for depth
 
+  // Header styling
   h1 {
     color: $primary-color;
     margin-bottom: 30px;
     font-size: 3rem;
     text-align: center;
     font-weight: 800;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); // Text shadow for emphasis
   }
 
+  // Container for event details
   .event-info {
     background-color: $card-bg-color;
     border-radius: $border-radius;
@@ -29,16 +32,17 @@
     text-align: center;
     width: 100%;
     max-width: 700px;
-    animation: slideIn 0.5s ease-in-out;
+    animation: slideIn 0.5s ease-in-out; // Slide-in animation for smooth appearance
 
     p {
       margin: 15px 0;
       color: $secondary-color;
       font-size: 1.2rem;
-      line-height: 1.8;
+      line-height: 1.8; // Increased line height for readability
     }
   }
 
+  // Container for the list of attendees
   .attendees-list {
     background-color: $card-bg-color;
     border-radius: $border-radius;
@@ -47,9 +51,10 @@
     text-align: center;
     width: 100%;
     max-width: 700px;
-    animation: slideIn 0.5s ease-in-out;
+    animation: slideIn 0.5s ease-in-out; // Slide-in animation for smooth appearance
     position: relative;
 
+    // Header for attendees section
     h2 {
       margin-bottom: 30px;
       color: $primary-color;
@@ -58,11 +63,12 @@
     }
 
     ul {
-      list-style: none;
+      list-style: none; // Remove default list styling
       padding: 0;
       margin: 0;
     }
 
+    // Styling for each attendee item
     li {
       margin: 15px 0;
       padding: 15px;
@@ -72,15 +78,16 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      transition: background-color $transition-speed, transform $transition-speed;
+      transition: background-color $transition-speed, transform $transition-speed; // Smooth transition on hover
 
       &:hover {
-        background-color: $highlight-color;
+        background-color: $highlight-color; // Highlight color on hover
         color: #fff;
-        transform: scale(1.02);
+        transform: scale(1.02); // Slight scaling effect
       }
     }
 
+    // Styling for the delete button
     button {
       background-color: $delete-color;
       color: #fff;
@@ -89,14 +96,15 @@
       padding: 8px 16px;
       font-size: 0.9rem;
       cursor: pointer;
-      transition: background-color $transition-speed, transform $transition-speed;
+      transition: background-color $transition-speed, transform $transition-speed; // Smooth transition on hover
 
       &:hover {
-        background-color: darken($delete-color, 10%);
-        transform: scale(1.1);
+        background-color: darken($delete-color, 10%); // Darker color on hover
+        transform: scale(1.1); // Slight scaling effect
       }
     }
 
+    // Wrapper for the attendee registration form
     .attendee-form-wrapper {
       margin-top: 30px;
       display: flex;
@@ -106,45 +114,45 @@
   }
 }
 
-// Animations
+// Keyframe animations for smooth transitions
 @keyframes fadeIn {
   from {
-    opacity: 0;
+    opacity: 0; // Start invisible
   }
   to {
-    opacity: 1;
+    opacity: 1; // End fully visible
   }
 }
 
 @keyframes slideIn {
   from {
-    transform: translateY(-30px);
-    opacity: 0;
+    transform: translateY(-30px); // Start slightly above
+    opacity: 0; // Start invisible
   }
   to {
-    transform: translateY(0);
-    opacity: 1;
+    transform: translateY(0); // End at original position
+    opacity: 1; // End fully visible
   }
 }
 
-// Media Queries
+// Media Queries for responsive design
 @media (max-width: 768px) {
   .event-detail {
-    padding: 30px;
+    padding: 30px; // Reduced padding for smaller screens
 
     h1 {
-      font-size: 2.5rem;
+      font-size: 2.5rem; // Smaller font size for headings
     }
 
     .event-info,
     .attendees-list {
-      width: 100%;
+      width: 100%; // Full width for smaller screens
     }
   }
 
   .attendees-list {
     .attendee-form-wrapper {
-      margin-top: 20px;
+      margin-top: 20px; // Reduced margin for form on smaller screens
     }
   }
 }
@@ -152,7 +160,7 @@
 @media (max-width: 576px) {
   .event-detail {
     h1 {
-      font-size: 2rem;
+      font-size: 2rem; // Further reduced font size for very small screens
     }
   }
 }

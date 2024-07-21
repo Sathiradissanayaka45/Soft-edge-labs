@@ -1,3 +1,4 @@
+// Color Variables
 $primary-color: #007bff;
 $secondary-color: #6c757d;
 $update-color: #28a745;
@@ -20,6 +21,7 @@ body {
   background: #ffffff;
 }
 
+// Event List Styles
 .event-list {
   background: linear-gradient(135deg, #ffffff, #ffffff);
   padding: 40px 20px;
@@ -28,7 +30,7 @@ body {
   align-items: center;
   min-height: 100vh;
 
-  // Add responsiveness for h1 and add-event-button
+  // Header Styles
   h1 {
     color: $primary-color;
     margin-bottom: 30px;
@@ -37,6 +39,7 @@ body {
     font-weight: 700;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 
+    // Responsive font size adjustments
     @media (max-width: 768px) {
       font-size: 2rem;
     }
@@ -46,6 +49,7 @@ body {
     }
   }
 
+  // Button to add a new event
   .add-event-button {
     background-color: $add-event-color;
     color: #fff;
@@ -60,11 +64,13 @@ body {
     display: inline-block;
     margin-bottom: 30px;
 
+    // Hover effect for the button
     &:hover {
       background-color: lighten($add-event-color, 5%);
       transform: scale(1.05);
     }
 
+    // Responsive font size adjustments
     @media (max-width: 768px) {
       font-size: 0.9rem;
     }
@@ -75,6 +81,7 @@ body {
     }
   }
 
+  // Grid layout for event cards
   .event-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); // Responsive grid layout
@@ -82,6 +89,7 @@ body {
     width: 100%;
     max-width: 1200px;
 
+    // Responsive gap adjustments
     @media (max-width: 768px) {
       gap: 15px;
     }
@@ -91,6 +99,7 @@ body {
     }
   }
 
+  // Individual event card styles
   .event-card {
     background-color: $card-bg-color;
     border-radius: $border-radius;
@@ -100,12 +109,14 @@ body {
     display: flex;
     flex-direction: column;
 
+    // Hover effect for event card
     &:hover {
       transform: translateY(-5px);
       box-shadow: $card-hover-shadow;
       background-color: lighten($card-bg-color, 5%);
     }
 
+    // Card header styles
     .card-header {
       padding: 15px;
       background: $primary-color;
@@ -114,10 +125,12 @@ body {
       border-bottom: 2px solid darken($primary-color, 10%);
       box-shadow: inset 0 -5px 15px rgba(0, 0, 0, 0.1);
 
+      // Header title styles
       h2 {
         margin: 0;
         font-size: 1.5rem;
 
+        // Responsive font size adjustments
         @media (max-width: 768px) {
           font-size: 1.25rem;
         }
@@ -128,17 +141,20 @@ body {
       }
     }
 
+    // Card body styles
     .card-body {
       padding: 15px;
       text-align: center;
       flex: 1;
 
+      // Paragraph styles within the card body
       p {
         margin: 10px 0;
         color: $secondary-color;
         font-size: 0.95rem;
         line-height: 1.5;
 
+        // Responsive font size adjustments
         @media (max-width: 768px) {
           font-size: 0.9rem;
         }
@@ -148,6 +164,7 @@ body {
         }
       }
 
+      // Event details styling
       .event-details {
         margin: 10px 0;
         display: flex;
@@ -161,6 +178,7 @@ body {
       }
     }
 
+    // Card footer styles
     .card-footer {
       padding: 10px;
       background: $bg-color;
@@ -171,6 +189,7 @@ body {
       gap: 10px;
       flex-wrap: wrap;
 
+      // Link and button styles within the footer
       a, button {
         text-decoration: none;
         font-weight: bold;
@@ -183,17 +202,20 @@ body {
         border-radius: $border-radius;
         margin: 5px;
 
+        // Update button styles
         &.update {
           color: #fff;
           background: linear-gradient(145deg, $update-color, darken($update-color, 10%));
           box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 
+          // Hover effect for update button
           &:hover {
             background: linear-gradient(145deg, darken($update-color, 10%), $update-color);
             transform: scale(1.05);
           }
         }
 
+        // Delete button styles
         &.delete {
           color: #fff;
           background-color: $delete-color;
@@ -203,17 +225,20 @@ body {
           border: none;
           cursor: pointer;
 
+          // Hover effect for delete button
           &:hover {
             background-color: darken($delete-color, 10%);
             transform: scale(1.05);
           }
         }
 
+        // Details button styles
         &.details {
           color: $primary-color;
           background-color: transparent;
           border: 2px solid $primary-color;
 
+          // Hover effect for details button
           &:hover {
             color: darken($primary-color, 10%);
             background-color: rgba($primary-color, 0.1);
@@ -224,6 +249,7 @@ body {
     }
   }
 
+  // Confirmation popup styles
   .confirmation-popup {
     position: fixed;
     top: 50%;
@@ -239,11 +265,13 @@ body {
     flex-direction: column;
     gap: 15px;
 
+    // Popup text styling
     p {
       font-size: 1rem;
       color: $secondary-color;
     }
 
+    // Button styles within the popup
     button {
       padding: 10px 20px;
       border: none;
@@ -253,16 +281,19 @@ body {
       transition: background-color $transition-speed;
       width: 100%;
 
+      // Yes, Delete button styles
       &:first-of-type {
         background-color: $delete-color;
         color: #fff;
       }
 
+      // Cancel button styles
       &:last-of-type {
         background-color: #6c757d;
         color: #fff;
       }
 
+      // Hover effect for buttons
       &:hover {
         opacity: 0.8;
       }
