@@ -99,3 +99,4 @@ Open a web browser and go to [http://localhost:3000](http://localhost:3000) to a
 - The backend code is located in the `backend` directory.
 - The frontend code is located in the `frontend` directory.
 
+For further questions or support, please refer to the documentation or contact support.
